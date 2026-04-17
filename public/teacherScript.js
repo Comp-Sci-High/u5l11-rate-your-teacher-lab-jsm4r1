@@ -9,7 +9,7 @@ createForm.addEventListener("submit", async(e) => {
 
     const response = await fetch("/add/teacher", {
         method: "POST",
-        header: {
+        headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(reqBody),

@@ -5,12 +5,12 @@ const createForm = document.querySelector("form")
 createForm.addEventListener("submit", async(e) => {
     e.preventDefault()
 
-    const teacherSchema = new FormData(createForm)
+    const ratingSchema = new FormData(createForm)
     const reqBody = Object.fromEntries(ratingSchema)
 
-    const response = await fetch("/add/ratings", {
+    const response = await fetch("/add/rating", {
         method: "POST",
-        header: {
+        headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(reqBody),
